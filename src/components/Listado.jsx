@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Table from "react-bootstrap/Table";
 
-const Listado = ({
-  updatedData,
-  searchValue,
-  setUpdatedData,
-  returnFiltered,
-}) => {
+const Listado = ({ updatedData, searchValue, setUpdatedData }) => {
   function getKeys(data, searchValue) {
     const keys = Object.keys(data).slice(1);
     for (const key of keys) {
-      if (data[key].toLowerCase().includes(searchValue)) {
+      if (data[key].toLowerCase().includes(searchValue.toLowerCase())) {
         return key;
       }
     }
@@ -26,7 +21,7 @@ const Listado = ({
   const filtered = getData.filter((data) => {
     const key = getKeys(data, searchValue);
 
-    return searchValue.toLowerCase() === "" ? getData : key;
+    return searchValue === "" ? getData : key;
   });
 
   const tableData = filtered.map((collab) => (
