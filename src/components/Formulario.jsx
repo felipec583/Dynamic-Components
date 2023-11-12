@@ -93,6 +93,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
     <section className="form-cont">
       <Form onSubmit={handleSubmit}>
         <h1 className="fs-2 text-center">Agregar Colaborador</h1>
+
         <Form.Group className="mb-3 my-3" controlId="formName">
           <Form.Control
             type="name"
@@ -103,6 +104,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
             name="nombre"
           />
         </Form.Group>
+
         <Form.Group className="mb-3 my-3" controlId="formBasicEmail">
           <Form.Control
             type="email"
@@ -113,6 +115,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
             name="correo"
           />
         </Form.Group>
+
         <Form.Group className="mb-3 my-3" controlId="formAge">
           <Form.Control
             type="text"
@@ -134,6 +137,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
             )}
           </Form.Text>
         </Form.Group>
+
         <Form.Group className="mb-1 my-3" controlId="formRole">
           <Form.Control
             type="text"
@@ -143,6 +147,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
             name="cargo"
           />
         </Form.Group>
+
         <Form.Group className="mb-1 my-3" controlId="formPhonenumber">
           <Form.Control
             type="text"
@@ -163,6 +168,7 @@ const Formulario = ({ updatedData, setUpdatedData, setError }) => {
             )}
           </Form.Text>
         </Form.Group>
+        
         <Button type="submit" variant="success" className="my-3 fs-5 w-100 ">
           Agregar al colaborador
         </Button>
